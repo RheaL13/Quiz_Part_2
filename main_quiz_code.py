@@ -1,5 +1,5 @@
-"""Author: Rhea Lal, Date: 3/6/24 - 9/9/24, Purpose: A GUI program that tests 
-and teaches users (aged 18-30) on over-consumption.
+"""Author: Rhea Lal, Date: 3/6/24 - 9/9/24, Purpose: A GUI program that
+tests and teaches users (aged 18-30) on over-consumption.
 """
 # Importing all the modules for the program
 """Provides functions for creating and removing a directory / folder."""
@@ -17,7 +17,9 @@ from datetime import datetime
 import tkinter as tk
 """Allows access to the Tk themed widget set."""
 from tkinter import ttk
-"""Holds integer data where we can set integer data and can retrieve it"""
+"""Holds integer data where we can set integer data and can retrieve 
+it.
+"""
 from tkinter import IntVar
 """Importing the tkinter text style."""
 from tkinter import Text
@@ -27,9 +29,13 @@ from tkinter import INSERT
 from tkinter import font
 """Allows the tkinter style of message box that pops up."""
 from tkinter import messagebox as mb
-"""Imports the tkinter style of image that are saved to display and modify."""
+"""Imports the tkinter style of image that are saved to display and 
+modify.
+"""
 from PIL import Image
-"""Imports the tkinter style of image that are saved to display and modify.."""
+"""Imports the tkinter style of image that are saved to display and 
+modify.
+"""
 from PIL import ImageTk
 
 
@@ -232,7 +238,7 @@ class MainWindow:
 
     # The other buttons on the window (sidebar) and will always be there
     def create_sidebar(self):
-        """The buttons on the side of the window (will always be there)."""
+        """The buttons on the side of the window (are always there)."""
         buttons=[
             ("HOME", self.open_popup),
             ("USER\nMANUAL", self.open_popup),
@@ -798,7 +804,7 @@ class RandomQuiz:
         title.place(x=0, y=0)
 
     def radio_buttons(self):
-        """How the option are shown and clicked my the user (radio buttons)."""
+        """How the option are shown and clicked (radio buttons)."""
         q_list=[]
         y_pos=250
         while len(q_list)<4:
@@ -813,7 +819,9 @@ class RandomQuiz:
         return q_list
 
     def update_progress_bar(self, final=False):
-        """Updating the progress bar when moving onto the next question."""
+        """Updating the progress bar when moving onto the next 
+        question.
+        """
         if final or self.q_no >= self.data_size:
             self.progress_var.set(100)
         else:
@@ -955,7 +963,7 @@ class Quiz:
         title.place(x=0, y=0)
 
     def radio_buttons(self):
-        """How the option are shown and clicked my the user (radio buttons)."""
+        """How the option are shown and clicked (radio buttons)."""
         q_list=[]
         y_pos=250
         while len(q_list)<4:
@@ -971,7 +979,9 @@ class Quiz:
         return q_list
 
     def update_progress_bar(self, final=False):
-        """Updating the progress bar when moving onto the next question."""
+        """Updating the progress bar when moving onto the next 
+        question.
+        """
         if final or self.q_no >= self.data_size:
             self.progress_var.set(100)
         else:
@@ -1113,7 +1123,9 @@ class DashboardWindow:
 
     # The window that shows the user manual 
     def display_manual(self):
-        """The display of the user manual for the user - as a picture."""
+        """The display of the user manual for the user - 
+        as a picture.
+        """
         self.clear_main_area() # Specified part cleared for the new display 
 
         title2=tk.Label(self.main_frame, text="User Manual", 
@@ -1134,8 +1146,8 @@ class DashboardWindow:
     # The quiz page of the dashboard window. Where the user can click 
     # what kind of quiz they want to do (random or normal).
     def display_quiz(self):
-        """Displaying the quiz page where the user can choose between the 
-        normal or shuffled quiz order. 
+        """Displaying the quiz page where the user can choose between 
+        the normal or shuffled quiz order. 
         """
         self.clear_main_area() # Specified part cleared for the new display 
 
@@ -1174,8 +1186,9 @@ class DashboardWindow:
     # that will show some interesting and educational video / pictures 
     # about the topic
     def display_success_stories(self):
-        """Where the user can read more educational stories about the topic,
-        and click the more info button to get educational pictures / videos.
+        """Where the user can read more educational stories about the 
+        topic, and click the more info button to get educational 
+        pictures / videos.
         """
         self.clear_main_area()
 
@@ -1339,8 +1352,8 @@ from past mistakes and current successes, we can work towards a more sustainable
 
     # The code for the photos/vidoes page
     def open_photos_window(self):
-        """Window where there are videos and pictures that are eductational
-        for the topic. 
+        """Window where there are videos and pictures that are 
+        eductational for the topic. 
         """
         self.photos_window=tk.Toplevel(self.master)
         self.photos_window.title("Photo / Videos")
@@ -1536,7 +1549,9 @@ from past mistakes and current successes, we can work towards a more sustainable
 
     # The about page on the dashbaord window.
     def display_about(self):
-        """Displaying the about info of the entire program and picture."""
+        """Displaying the about info of the entire program and 
+        picture.
+        """
         self.clear_main_area()
 
         label=tk.Label(self.main_frame, text="Welcome to the About Page", 
@@ -1775,8 +1790,9 @@ from past mistakes and current successes, we can work towards a more sustainable
 
     # Code to open the quiz (the user chooses shuffled or normal order)
     def step1_open_quiz_window(self):
-        """Asks the user which kind of quiz they want, random or normal and
-        will open whichever one they choose (the different classes).
+        """Asks the user which kind of quiz they want, random or 
+        normal and will open whichever one they choose (the different 
+        classes).
         """
         popup_q1=tk.Toplevel()
         popup_q1.title("QUIZ")
